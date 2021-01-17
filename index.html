@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+</head>
+
+<body onload="loadposts()">
+    <!--Navbar-->
+    <div class="header-container">
+
+        <div class="insta-logo"> <a href="#top"><img src="img/Da_Gram.png" alt="DA GRAM"></a>
+        </div>
+        <div class="inputsearch"> <input type="text" id="search" onkeypress="filternames()" placeholder="Suchen" />
+        </div>
+
+        <div class="header-icons">
+            <a href="#top"><img src="img/icons/home-7-64.png" alt=""></a>
+            <img src="img/icons/paper-plane-64.png" alt="">
+            <img src="img/icons/compass-64.png" onclick="showlocation()" alt="">
+            <img src="img/icons/favorite-2-64.png" alt="">
+            <div class="user-image"><img src="img/profile0.jpg" alt=""> </div>
+        </div>
+    </div>
+    <!--Absolute div for geolocation-->
+    <div class="geolog" id="geocontainer">
+        <p id="demo"></p>
+    </div>
+
+    <!--Absolute div for search-->
+    <div class="search-container z-1" id="searchcontainer" onclick="closesearch()">
+        <div id="searchlist"></div>
+    </div>
+
+    <!--Newsfeed containers-->
+    <div class="mainbody">
+        <div class="posts-container" id="postscontainer">
+
+            <!--example post
+            <div class="post" id="post0">
+                <div class="post-header">
+                    <img id="authorimage0" src="img/author0.jpg" alt="">
+                    <div class="flexgrow1">
+                        <div id="author0"> <b> author</b></div>
+                        <div id="geotag0">geotag</div>
+                    </div>
+                    <div class="post-ellipsis"><img src="img/icons/ellipsis.png" alt=""></div>
+                </div>
+
+                <div class="postimage" id="postimage0"><img src="img/post0.jpg" alt=""></div>
+                <div class="post-bar">
+                    <div id="like"><img src="img/icons/favorite-4-64.png" alt="" onclick="togglelike()"></div>
+                    <img class="marginleft" src="img/icons/comments-64.png" alt="">
+                    <div class="flexgrow1"><img class="marginleft" src="img/icons/paper-plane-64.png" alt=""></div>
+                    <div id="bookmark"><img src="img/icons/bookmark-5-64.png" onclick="togglebookmark()" alt=""></div>
+                </div>
+
+                <div class="post-text" id="posttext"> <b>author</b> Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Fuga, ipsum laborum. Deserunt adipisci earum vitae, mollitia, facilis blanditiis, natus quis
+                    quasi est neque unde doloremque ut perspiciatis ad enim minus! </div>
+                <div class="post-date" id="datepublished">VOR XXXX STUNDEN VERÖFFENLICHT</div>
+                <div id="comments0"></div>
+                <div class="comment-input" id="commentpost0">
+                    <form id="form"><textarea name="" maxlength="250" id="comment"
+                            placeholder="Kommentar hinzufügen..."></textarea><button type="Submit">Absenden</button>
+                    </form>
+                </div>
+            </div> -->
+
+
+        </div>
+
+        <!--Sideboard with name and friend suggestions-->
+        <div class="sideboard">
+            <div class="profile-row"><img src="img/profile0.jpg" alt="">
+                <div class="flexgrow1">
+                    <p> <b>Dein Alias</b></p>
+                    <p>Dein Name</p>
+                </div>
+                <div class="text-blue pointer">Wechseln</div>
+            </div>
+
+            <div class="suggestions-header">
+                <p>Vorschläge für dich</p>
+                <p>Alle ansehen</p>
+            </div>
+
+
+            <div id="suggestcontainer">
+                <!--Preview Suggestions
+                <div class="profile-row" id="friendsuggest2"><img src="img/author2.jpg" alt="">
+                    <div class="flexgrow1">
+                        <p> <b>Eve12345</b></p>
+                        <p>Eva Musterfrau</p>
+                    </div>
+                    <div class="text-blue pointer" id="addfriend2" onclick="addfriend(2)">Abonnieren</div>
+                </div>
+
+                <div class="profile-row" id="friendsuggest2"><img src="img/author3.jpg" alt="">
+                    <div class="flexgrow1">
+                        <p> <b>Herr Berto</b></p>
+                        <p>Herbert</p>
+                    </div>
+                    <div class="text-blue pointer" id="addfriend3" onclick="addfriend(3)">Abonnieren</div>
+                </div>-->
+            </div>
+
+
+            <div class="pointer Links margintop30"> <a href="">Info</a> &#8226; <a href="">Hilfe</a> &#8226; <a
+                    href="">Presse</a>
+                &#8226; <a href="">API</a> &#8226; <a href="">Jobs</a> &#8226; <a href="">Datenrichtlinie</a> &#8226;
+                <a href="">Impressum/AGB/NetzDG</a> &#8226; <a href="">Standorte</a> &#8226; <a href="">Top-Konten</a>
+                &#8226; <a href="">Hashtags</a> &#8226; <a href="">Sprache</a> </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
