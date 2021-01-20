@@ -238,7 +238,7 @@ function loadposts() {
 
     buildpostshtml();
 
-    
+
 }
 
 
@@ -311,7 +311,7 @@ function addcomment(i) {
         let text = document.getElementById(commentid).value;
         console.log(text + commentid);
         //let place = posts[i].comments;
-       // let placeall = addposts[i].comments;
+        // let placeall = addposts[i].comments;
         //placeall.push(text);
 
         var specifyid = posts.findIndex(obj => obj.id == i);
@@ -324,15 +324,21 @@ function addcomment(i) {
     }
 }
 
-/*
-*upload images (currently under construction)
-*/
-
-
 
 /*
 *submitOnEnter: push enter to add comment to post(not working yet)
 */
+function init() {
+    document.addEventListener("keydown", function (e) {
+        if (e.keyCode == 13) {  
+            let completeid = document.activeElement.id;
+            let id = completeid.replace( /^\D+/g, '');
+            console.log(completeid);
+            addcomment(id);
+        }
+    });
+}
+
 //function submitOnEnter(event) {  //from https://stackoverflow.com/questions/8934088/how-to-make-enter-key-in-a-textarea-submit-a-form/49389811
 
 //    formid = 'form' + i;
